@@ -1,0 +1,196 @@
+# Site settings
+title: "Oliver White - Cybersecurity Professional"
+email: 702seopro@gmail.com
+description: >-
+  Cybersecurity student and web developer with a passion for AI automation. 
+  Building practical security skills through hands-on projects while exploring 
+  how artificial intelligence can enhance cybersecurity workflows and learning.
+
+baseurl: ""
+url: "https://odub30.github.io"
+location: "Henderson, NV"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Collections for discipline-specific content
+collections:
+  cybersecurity:
+    output: true
+    permalink: /:collection/:name/
+    sort_by: date
+  webdev:
+    output: true
+    permalink: /:collection/:name/
+    sort_by: date
+  ai:
+    output: true
+    permalink: /:collection/:name/
+    sort_by: date
+  challenges:
+    output: true
+    permalink: /:collection/:path/
+    sort_by: date
+
+# Navigation structure
+nav_links:
+  - title: "Home"
+    url: /
+  - title: "About"
+    url: /about
+  - title: "Cybersecurity"
+    url: /cybersecurity
+    submenu:
+      - title: "Overview"
+        url: /cybersecurity
+      - title: "Projects"
+        url: /cybersecurity/projects
+      - title: "Certifications"
+        url: /cybersecurity/certifications
+      - title: "Challenges"
+        url: /cybersecurity/challenges
+  - title: "Web Development"
+    url: /web-development
+    submenu:
+      - title: "Overview"
+        url: /web-development
+      - title: "Projects"
+        url: /web-development/projects
+      - title: "Technologies"
+        url: /web-development/technologies
+      - title: "This Website"
+        url: /web-development/portfolio-meta
+  - title: "AI & Automation"
+    url: /ai-automation
+    submenu:
+      - title: "Overview"
+        url: /ai-automation
+      - title: "Projects"
+        url: /ai-automation/projects
+      - title: "Experiments"
+        url: /ai-automation/experiments
+      - title: "Tools & APIs"
+        url: /ai-automation/tools-and-apis
+  - title: "Learning Journey"
+    url: /learning
+  - title: "Personal"
+    url: /personal
+    submenu:
+      - title: "AI Passion"
+        url: /personal/ai-passion
+      - title: "My Cats"
+        url: /personal/cats
+  - title: "Contact"
+    url: /contact
+
+# Discipline color themes
+discipline_colors:
+  cybersecurity: "#dc2626"    # Red - security/alertness
+  webdev: "#2563eb"          # Blue - technology/trust
+  ai: "#059669"              # Green - growth/innovation
+  personal: "#7c3aed"        # Purple - creativity/personality
+
+# Social links
+social_links:
+  github: "odub30"      # Replace with actual username
+  linkedin: "oliver-white-cyber"  # Replace with actual LinkedIn handle
+  email: "702seopro@gmail.com"
+  location: "Henderson, NV"
+
+# SEO and social
+author: Oliver White
+twitter:
+  username: # Add if you have Twitter
+  card: summary
+linkedin:
+  username: oliver-white-cyber
+github:
+  username: odub30
+
+# Analytics (uncomment when ready)
+# google_analytics: G-XXXXXXXXXX
+
+# Build configuration
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - LICENSE
+  - "*.tmp"
+  - "*.bak"
+
+# Include files
+include:
+  - _pages
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "cybersecurity"
+    values:
+      layout: "project"
+      discipline: "cybersecurity"
+      author: "Oliver White"
+  - scope:
+      path: ""
+      type: "webdev"
+    values:
+      layout: "project"
+      discipline: "webdev"
+      author: "Oliver White"
+  - scope:
+      path: ""
+      type: "ai"
+    values:
+      layout: "project"
+      discipline: "ai"
+      author: "Oliver White"
+  - scope:
+      path: ""
+      type: "challenges"
+    values:
+      layout: "challenge"
+      discipline: "cybersecurity"
+      author: "Oliver White"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Oliver White"
+
+# Site configuration
+timezone: America/Los_Angeles
+encoding: utf-8
+
+# Liquid options
+liquid:
+  error_mode: warn
+  strict_filters: false
+  strict_variables: false
+
+# Markdown options
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..3
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
